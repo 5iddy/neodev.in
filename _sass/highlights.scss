@@ -1,13 +1,19 @@
 /**
  * Syntax highlighting styles
  */
+.highlighter-rouge {
+  background-color: $grey-dark;
+  color: $white;
+}
+
 .highlight {
-  background: #24222f;
+  background-color: $dark;
   color: #26d2f6;
   margin: $spacing-unit / 2;
+  font-family: $family-monospace;
 
   .highlighter-rouge & {
-    background: #24222f;
+    background-color: $dark;
   }
 
   .p {

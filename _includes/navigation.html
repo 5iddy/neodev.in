@@ -1,7 +1,7 @@
 <nav id="NavBar" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <div class="navbar-item">
-            <a href="/" class="title">
+            <a href="/" class="title" style="font-family: Rampart One;">
                     {{ site.title }}
             </a>
         </div>
@@ -15,29 +15,9 @@
 
     <div class="navbar-menu has-text-centered" v-bind:class="{ 'is-active': isNavbarActive }">
         {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" class="navbar-item {% if page.url == item.link %}is-active{% endif %}">
+        <a href="{{ item.link }}" class="navbar-item {% if page.url contains item.link %}is-active{% endif %}">
             {{ item.name }}
         </a>
         {% endfor %}
     </div> <!-- end of navbar-menu -->
 </nav> <!-- end of navbar -->
-
-<!-- <script>
-    const createApp = options => {
-        const app = Vue.createApp(options)
-        app.config.compilerOptions.delimiters = ['[[', ']]']
-        return app
-    }
-    const navBarApp = createApp({
-        data() {
-            return {
-                isNavbarActive: false,
-            }
-        },
-        methods: {
-            showMenu() {
-                this.isNavbarActive = !this.isNavbarActive
-            },
-        }
-    }).mount("#NavBar")
-</script> -->

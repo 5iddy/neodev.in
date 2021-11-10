@@ -1,10 +1,49 @@
 @charset "utf-8";
 // Import a Google Font
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,700");
+@import url("https://fonts.googleapis.com/css2?family=Poiret+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rampart+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
 
 // Set your brand colors
+$white-ter: #ffffff;
+$white: #eaeaea;
+$black: #24222f;
+$cyan: #26d2f6;
+$turquoise: #35dd9d;
+$blue: #009eff;
+$yellow: #fff629;
+$red: #ff1372;
+$green: #89ec4b;
+$grey-darker: #2d2b3a;
+$grey-dark: #444154;
+$orange: #ff584f;
+$purple: #bf75ff;
+
+// Set Site ColorScheme
+$dark: $black;
+$body-background-color: $grey-darker;
+$footer-background-color: $dark;
+$background: $grey-dark;
+$text: $white-ter;
+$title-color: $white-ter;
+$link: $blue;
+$link-hover: $turquoise;
+$text-strong: $white-ter;
+
+// navbar colors
+$navbar-background-color: $black;
+$navbar-item-color: $turquoise;
+$navbar-item-hover-color: $cyan;
+$navbar-item-hover-background-color: $grey-darker;
+$navbar-divider-background-color: $red;
+$navbar-item-active-color: $blue;
+$navbar-item-active-background-color: $grey-dark;
 
 // Update Bulma's global variables
+$family-monospace: "Inconsolata";
 $family-sans-serif: "Nunito", sans-serif;
 
 // Update some of Bulma's component variables
