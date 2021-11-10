@@ -61,6 +61,15 @@ kramdown:
 #   - vendor/gems/
 #   - vendor/ruby/
 
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+
 collections:
   authors:
     output: true
