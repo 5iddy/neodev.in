@@ -1,0 +1,18 @@
+---
+layout: pages
+title: Blog Home
+subtitle: this is my blog
+description: Hello About
+image-url: /assets/images/book-stock-image.jpg
+---
+
+<h1>Latest Posts</h1>
+
+<ul>
+    {% for post in site.posts %}
+    <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        {{ post.description }}
+    </li>
+    {% endfor %}
+</ul>

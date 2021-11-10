@@ -1,0 +1,17 @@
+---
+layout: pages
+title: Staff
+---
+<h1 class="title">Staff</h1>
+
+<div class="container content">
+    <ul>
+        {% for author in site.authors %}
+        <li>
+            <h3>{{ author.name }}</h2>
+            <h4>{{ author.position }}</h3>
+            <p>{{ author.content | markdownify }}</p>
+        </li>
+        {% endfor %}
+    </ul
+</div>

@@ -1,8 +1,7 @@
 ---
 layout: default
 ---
-<section 
-class="hero is-medium has-text-centered
+<section class="hero is-medium has-text-centered
 {% unless page.image-url %}
     is-primary
 {% endunless%}
@@ -16,8 +15,11 @@ style="
     {% endif %}">
     <div class="hero-body">
         <h1 class="title has-text-white">
-            {{ page.title }}
+            {{ page.name }}
         </h1>
+        <p class="subtitle">
+            {{ page.position }}
+        </p>
     </div>
 </section>
 <section class="section content">

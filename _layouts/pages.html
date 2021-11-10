@@ -13,15 +13,19 @@ style="
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    {% endif %}">
-    <div class="hero-body">
-        <h1 class="title has-text-white">
+    {% endif %}
+    ">
+    <section class="hero-body">
+        <h1 class="title">
             {{ page.title }}
         </h1>
-    </div>
+        <p class="subtitle">
+            {{page.subtitle}}
+        </p>
+    </section>
 </section>
-<section class="section content">
+<section class="section">
     <div class="container">
-        {{ page.content }}
+        {{ content }}
     </div>
 </section>
