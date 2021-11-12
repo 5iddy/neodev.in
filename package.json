@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "bundle exec jekyll server --livereload -w",
-    "build": "bundle exec jekyll build"
+    "serve": "bundle exec jekyll server --livereload -w",
+    "build-dev": "webpack build --watch",
+    "build": "NODE_ENV=production webpack build",
+    "clean": "rm -rf ./src/assets/js/*"
   },
   "repository": {
     "type": "git",
@@ -16,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/5iddy/neodev.in/issues"
   },
-  "homepage": "https://github.com/5iddy/neodev.in#readme"
+  "homepage": "https://github.com/5iddy/neodev.in#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "@vue/cli": "^4.5.15",
+    "babel-loader": "^8.2.3",
+    "vue": "^3.2.21",
+    "webpack": "^5.63.0",
+    "webpack-cli": "^4.9.1"
+  }
 }
