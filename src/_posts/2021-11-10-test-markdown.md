@@ -193,3 +193,5 @@ This line is only separated by a single newline, so it's a separate line in the 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/i2lhwb_OckQ/0.jpg)](http://www.youtube.com/watch?v=i2lhwb_OckQ)
+
+{% gist 7d7c6233abeba16b346dc448751103d6 %}
