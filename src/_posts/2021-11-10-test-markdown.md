@@ -194,4 +194,5 @@ alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/i2lhwb_OckQ/0.jpg)](http://www.youtube.com/watch?v=i2lhwb_OckQ)
 
-{% gist 7d7c6233abeba16b346dc448751103d6 %}
+gist: 
+<script src="https://gist.github.com/5iddy/2a319a9d92617b23d363fcbfa837e58b.js"></script>
