@@ -6,193 +6,181 @@ description: Hello World
 image-url: /assets/images/book-stock-image.jpg
 ---
 
-# H1
+# h1 Heading
 
-## H2
+## h2 Heading
 
-### H3
+### h3 Heading
 
-#### H4
+#### h4 Heading
 
-##### H5
+##### h5 Heading
 
-###### H6
+###### h6 Heading
 
-Alternatively, for H1 and H2, an underline-ish style:
+## Horizontal Rules
 
-# Alt-H1
+---
 
-## Alt-H2
+---
 
-Emphasis, aka italics, with _asterisks_ or _underscores_.
+---
 
-Strong emphasis, aka bold, with **asterisks** or **underscores**.
+## Emphasis
 
-Combined emphasis with **asterisks and _underscores_**.
+**This is bold text**
 
-Strikethrough uses two tildes. ~~Scratch this.~~
+**This is bold text**
 
-1. First ordered list item
-2. Another item
-   ⋅⋅\* Unordered sub-list.
-3. Actual numbers don't matter, just that it's a number
-   ⋅⋅1. Ordered sub-list
-4. And another item.
+_This is italic text_
 
-⋅⋅⋅You can have properly indented paragraphs within list items. Notice the blank line above, and the leading spaces (at least one, but we'll use three here to also align the raw Markdown).
+_This is italic text_
 
-⋅⋅⋅To have a line break without a paragraph, you will need to use two trailing spaces.⋅⋅
-⋅⋅⋅Note that this line is separate, but within the same paragraph.⋅⋅
-⋅⋅⋅(This is contrary to the typical GFM line break behaviour, where trailing spaces are not required.)
+~~Strikethrough~~
 
-- Unordered list can use asterisks
+## Blockquotes
 
-* Or minuses
+> Blockquotes can also be nested...
+>
+> > ...by using additional greater-than signs right next to each other...
+> >
+> > > ...or with spaces between arrows.
 
-- Or pluses
+## Lists
 
-[I'm an inline-style link](https://www.google.com)
+Unordered
 
-[I'm an inline-style link with title](https://www.google.com "Google's Homepage")
+- Create a list by starting a line with `+`, `-`, or `*`
+- Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    - Ac tristique libero volutpat at
+    * Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
+- Very easy!
 
-[I'm a reference-style link][arbitrary case-insensitive reference text]
+Ordered
 
-<!-- [I'm a relative reference to a repository file](../blob/master/LICENSE) -->
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
 
-[You can use numbers for reference-style link definitions][1]
+4. You can use sequential numbers...
+5. ...or keep all the numbers as `1.`
 
-Or leave it empty and use the [link text itself].
+Start numbering with offset:
 
-URLs and URLs in angle brackets will automatically get turned into links.
-http://www.example.com or <http://www.example.com> and sometimes
-example.com (but not on Github, for example).
+57. foo
+1. bar
 
-Some text to show that the reference links can follow later.
+## Code
 
-[arbitrary case-insensitive reference text]: https://www.mozilla.org
-[1]: http://slashdot.org
-[link text itself]: http://www.reddit.com
+Inline `code`
 
-Here's our logo (hover to see the title text):
+Indented code
 
-Inline-style:
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
 
-Reference-style:
-![alt text][logo]
+Block code "fences"
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-Inline `code` has `back-ticks around` it.
-
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
 ```
+Sample text here...
+```
+
+Syntax highlighting
+
+```js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+## python syntax highlight
 
 ```python
-"""
-main.py docs
-"""
-import logging
-from os import wait
-from aiogram import Bot, Dispatcher, executor, types
-from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from config import API_TOKEN, RATE_LIMIT
+from typing import Optional
+
+from fastapi import FastAPI
+
+app = FastAPI()
 
 
-# Configure logging
-logging.basicConfig(filename='.logs/telegrambot.log', level=logging.DEBUG)
-storage = MemoryStorage()
-
-# Initialize bot and dispatcher
-bot = Bot(token=API_TOKEN)
-dp = Dispatcher(bot, storage=storage, throttling_rate_limit=RATE_LIMIT)
-
-@dp.message_handler(commands=['register'])
-async def register_user():
-    # check if user has already been registered
-    # if they are, then exit with a reply that says
-    # they are already registered
-    # if not, then register them before asking for
-    # their email id and other personal information
-    pass
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
 
 
-@dp.message_handler(commands=['start'])
-@dp.throttled(lambda msg, loop, *args, **kwargs:
-              loop.create_task(bot.delete_message(msg.from_user.id, msg.message_id)))
-async def send_welcome(message: types.Message):
-    """
-    This handler will be called when user sends `/start` or `/help` command
-    """
-    print( await bot.get_my_commands())
-    await message.reply(f"""
-Hello, {message.from_user.first_name}!
-Welcome to BlockDeskVentures, A community driven Venture Capital advancing Blockchain Technology.
-    """)
+@app.get("/items/{item_id}")
+def read_item(item_id: int, q: Optional[str] = None):
+    return {"item_id": item_id, "q": q}
+```
 
-if __name__ == '__main__':
-    executor.start_polling(dp, skip_updates=True)
+## Rust Syntax Highlight
+
+```rust
+use actix_web::{get, post, App, HttpResponse, HttpServer, Responder};
+
+#[post("/echo")]
+async fn echo(req_body: String) -> impl Responder {
+    HttpResponse::Ok().body(req_body)
+}
+
+#[get("/hey")]
+async fn manual_hello() -> impl Responder {
+    HttpResponse::Ok().body("Hey there!")
+}
+
+#[actix_web::main]
+async fn main() -> std::io::Result<()> {
+    HttpServer::new(|| {
+        App::new()
+            .service(echo)
+            .service(manual_hello)
+    })
+    .bind("127.0.0.1:8080")?
+    .run()
+    .await
+}
 
 ```
 
-```
-No language indicated, so no syntax highlighting.
-But let's throw in a <b>tag</b>.
-```
+## Tables
 
-Colons can be used to align columns.
+| Option | Description                                                               |
+| ------ | ------------------------------------------------------------------------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default.    |
+| ext    | extension to be used for dest files.                                      |
 
-| Tables        |      Are      |  Cool |
-| ------------- | :-----------: | ----: |
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      |   centered    |   $12 |
-| zebra stripes |   are neat    |    $1 |
+Right aligned columns
 
-There must be at least 3 dashes separating each header cell.
-The outer pipes (|) are optional, and you don't need to make the
-raw Markdown line up prettily. You can also use inline Markdown.
+| Option |                                                               Description |
+| -----: | ------------------------------------------------------------------------: |
+|   data | path to data files to supply the data that will be passed into templates. |
+| engine |    engine to be used for processing templates. Handlebars is the default. |
+|    ext |                                      extension to be used for dest files. |
 
-| Markdown | Less      | Pretty     |
-| -------- | --------- | ---------- |
-| _Still_  | `renders` | **nicely** |
-| 1        | 2         | 3          |
+## Links
 
-> Blockquotes are very handy in email to emulate reply text.
-> This line is part of the same quote.
+[link text](http://dev.nodeca.com)
 
-Quote break.
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-> This is a very long line that will still be quoted properly when it wraps. Oh boy let's keep writing to make sure this is long enough to actually wrap for everyone. Oh, you can _put_ **Markdown** into a blockquote.
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
-Three or more...
+## Images
 
----
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-Hyphens
+Like links, Images also have a footnote style syntax
 
----
+![Alt text][id]
 
-Asterisks
+With a reference later in the document defining the URL location:
 
----
-
-text
-Underscores
-
-Here's a line for us to start with.
-
-This line is separated from the one above by two newlines, so it will be a _separate paragraph_.
-
-This line is also a separate paragraph, but...
-This line is only separated by a single newline, so it's a separate line in the _same paragraph_.
-
-<a href="http://www.youtube.com/watch?feature=player_embedded&v=i2lhwb_OckQ
-" target="_blank"><img src="http://img.youtube.com/vi/i2lhwb_OckQ/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
-
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/i2lhwb_OckQ/0.jpg)](http://www.youtube.com/watch?v=i2lhwb_OckQ)
-
-gist: 
-<script src="https://gist.github.com/5iddy/2a319a9d92617b23d363fcbfa837e58b.js"></script>
+[id]: https://octodex.github.com/images/dojocat.jpg "The Dojocat"
