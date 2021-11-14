@@ -29,10 +29,8 @@ github_username: 5iddy
 # Build settings
 # theme: minima
 sass:
-  sass_dir: src/_sass
+  sass_dir: _sass
   style: compressed
-
-source: src
 
 plugins:
   - jekyll-feed

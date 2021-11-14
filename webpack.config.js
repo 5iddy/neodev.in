@@ -7,10 +7,10 @@ const mode =
 module.exports = {
   mode: mode,
   entry: {
-    main: "./src/_js/index.js",
+    main: "./_js/index.js",
   },
   output: {
-    path: path.join(__dirname, "./src/assets/js/"),
+    path: path.join(__dirname, "./assets/js/"),
   },
   devtool: mode === "development" ? "source-map" : false,
   module: {
