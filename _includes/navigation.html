@@ -1,21 +1,21 @@
-<nav id="NavBar" class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+<nav id="NavBar" class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
         <div class="navbar-item">
-            <a href="/" class="title" style="font-family: Rampart One;">
+            <a href="/" class="title is-2" style="font-family: Rampart One;">
                     {{ site.title }}
             </a>
         </div>
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
-            v-on:click="showMenu">
+            v-on:click="showMenu" data-target="navbarMenu">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
         </a>
     </div>
 
-    <div class="navbar-menu has-text-centered" v-bind:class="{ 'is-active': isNavbarActive }">
+    <div id="navbarMenu" class="navbar-menu">
         {% for item in site.data.navigation %}
-        <a href="{{ item.link }}" class="navbar-item {% if page.url contains item.link %}is-active{% endif %}">
+        <a href="{{ item.link }}" class="navbar-item has-text-centered {% if page.url contains item.link %}is-active{% endif %}">
             {{ item.name }}
         </a>
         {% endfor %}

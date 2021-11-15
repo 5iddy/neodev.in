@@ -1,5 +1,8 @@
-export function createApp (options) {
-  const app = Vue.createApp(options);
-  app.config.compilerOptions.delimiters = ["[[", "]]"];
-  return app;
-};
+export function copyToClipboard(element){
+  if (element.textContent.startsWith("$ ")) {
+    var textToCopy = element.textContent.substr(2)
+  } else {
+    var textToCopy = element.textContent
+  }
+  navigator.clipboard.writeText(textToCopy.substr(0, textToCopy.length - 1))
+}

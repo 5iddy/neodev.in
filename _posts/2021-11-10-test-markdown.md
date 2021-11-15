@@ -6,8 +6,6 @@ description: Hello World
 image-url: /assets/images/book-stock-image.jpg
 ---
 
-# h1 Heading
-
 ## h2 Heading
 
 ### h3 Heading
