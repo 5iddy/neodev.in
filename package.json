@@ -7,7 +7,7 @@
     "serve": "bundle exec jekyll server --livereload",
     "build-dev": "webpack build --watch",
     "build": "NODE_ENV=production webpack build",
-    "clean": "rm -rf ./src/assets/js/*"
+    "clean": "rm -rf ./assets/js/*"
   },
   "repository": {
     "type": "git",

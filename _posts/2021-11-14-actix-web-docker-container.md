@@ -5,7 +5,6 @@ author: Siddhu
 subtitle: Hello world
 description: >-
   How to build, create and run actix web application in Docker Containers? How to create lightweight, secure and minimal docker containers?
-toc: true
 ---
 
 Easy guide to building and deploying actix web docker containers.
