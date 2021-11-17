@@ -1,32 +1,21 @@
 ---
 layout: default
 ---
-<section 
-
-{% unless page.image-url %}
-class="hero is-medium has-text-centered has-background-black"
-{% else %}
-class="hero is-medium has-text-centered"
-style=" background-image:url('{{ page.image-url }}');
-background-repeat: no-repeat;
-background-position: center;
-background-size: cover;"
-{% endunless%}>
-
+<section {% unless post.image-url %} class="hero is-medium has-text-centered has-background-black" {% else %}
+    class="hero is-medium has-text-centered cover-image" style="background-image:url('{{ page.image-url }}');" {%
+    endunless%}>
     <div class="hero-body">
-        <h1 class="title is-1"  style="font-family: Yeseva One;">
+        <h1 class="title is-1" style="font-family: Yeseva One;">
             {{ page.title }}
         </h1>
         <p class="subtitle">
             {{ page.subtitle }}
         </p>
     </div>
-
 </section> <!-- End of Hero Section -->
 
-
 <section class="section">
-    <div class="container">
+    <div class="container is-fullhd">
         <p class="block">
             {{page.description }}
         </p>

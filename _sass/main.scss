@@ -62,6 +62,11 @@ $navbar-divider-background-color: $red;
 $navbar-item-active-color: $blue;
 $navbar-item-active-background-color: $grey-dark;
 
+// card config
+$card-color: $white;
+$card-background-color: $dark;
+$card-shadow: $box-shadow;
+
 // Update Bulma's global variables
 $family-monospace: "mononoki", monospace;
 $family-sans-serif: "Nunito Sans", sans-serif;
@@ -70,7 +75,7 @@ $family-sans-serif: "Nunito Sans", sans-serif;
 
 @import "./bulma/bulma.sass";
 
-$spacing-unit: 30px;
+$spacing-unit: 10px;
 
 @import "./highlights.scss";
 
@@ -83,8 +88,18 @@ body {
 }
 
 .bd-copy {
-  opacity: 100;
   position: absolute;
-  right: $spacing-unit/2;
-  top: $spacing-unit/2;
+  right: 1px;
+  top: 10px;
+  opacity: 30%;
+}
+
+.bd-copy:hover {
+  opacity: 100%;
+}
+
+.cover-image {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

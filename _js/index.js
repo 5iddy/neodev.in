@@ -20,7 +20,7 @@ const codeBlocks = document.querySelectorAll("pre.highlight")
 
 codeBlocks.forEach(el => {
   const button = document.createElement('button')
-  button.classList.add('button', 'is-small', 'bd-copy')
+  button.classList.add('button', 'is-info', 'is-outlined','is-small', 'bd-copy')
   button.type = 'button'
   // button.innerText = 'Copy'
 
@@ -28,16 +28,21 @@ codeBlocks.forEach(el => {
   const icon = document.createElement("i")
   icon.classList.add("fas", "fa-clipboard")
   span.classList.add("icon")
-  button.appendChild(span.appendChild(icon))
+  span.appendChild(icon)
+  button.appendChild(span)
 
   button.addEventListener('click', () => {
     copyToClipboard(el)
     button.blur()
+    button.innerText = 'Copied!'
+    button.disabled = true
     button.classList.add('is-success')
     setTimeout(() => {
+      button.innerText = ''
+      button.appendChild(span)
+      button.disabled = false
       button.classList.remove('is-success')
     }, 2000)
-  })
-
-  el.parentNode.appendChild(button)
+  }) // end of addEventListener
+  el.parentElement.appendChild(button)
 })

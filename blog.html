@@ -1,18 +1,46 @@
 ---
-layout: pages
+layout: default
 title: Blog Home
 subtitle: this is my blog
 description: Hello About
-image-url: /assets/images/book-stock-image.jpg
 ---
 
-<h1>Latest Posts</h1>
+<section class="section">
+    <div class="block">
+        <h1 class="title is-4 has-text-centered">Latest Posts</h1>
+    </div>
+    <div class="columns">
+        {% for post in site.posts %}
+        <div class="column">
+            <div class="card">
+                {% if post.image-url %}
+                <div class="card-image">
+                    <figure class="image is-4by3">
+                        <img src="{{ post.image-url }}" alt="{{ post.image-alt }}">
+                    </figure>
+                </div>
+                {% endif %}
+                <div class="card-content">
+                    <div class="media-content">
+                        <p class="title is-4">
+                            {{ post.title }}
+                        </p>
+                        <!-- {% if post.author %}
+                    <p class="subtitle is-6">by {{ post.author }}</p>
+                    {% else %}
+                    <p class="subtitle is-6">by Neodev.in</p>
+                    {% endif %} -->
+                    </div>
+                    <div class="content">
+                        {{ post.description }}
+                    </div>
+                    <button class="button">
+                        <a href="{{ post.url }}">Read More</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-<ul>
-    {% for post in site.posts %}
-    <li>
-        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-        {{ post.description }}
-    </li>
-    {% endfor %}
-</ul>
+</section>

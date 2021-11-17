@@ -8,10 +8,17 @@
   box-shadow: 2px 2px $grey-dark;
 }
 
+div.highlight {
+  margin: $spacing-unit;
+}
+
+// pre.highlight {
+//   margin: $spacing-unit;
+// }
+
 .highlight {
   background-color: $dark;
   color: $cyan;
-  margin: $spacing-unit / 2;
   font-family: $family-code;
   border-radius: 4px;
   position: relative;
@@ -138,7 +145,6 @@
   } // Name.Builtin
   .nc {
     color: $magenta;
-    font-weight: normal;
     font-style: oblique;
   } // Name.Class
   .no {
