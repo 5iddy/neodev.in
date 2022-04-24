@@ -1,0 +1,73 @@
+title: neodev.in
+subtitle: An open source tutorial website
+description: >- # this means to ignore newlines until "baseurl:"
+  An open source tutorial website for Rust lang, C, Python and eveything Linux related.
+  All the tutorials are hosted at https://github.com/5iddy/neodev.in 
+baseurl: ""
+url: "https://neodev.in"
+remote_theme: 5iddy/neonnights-jekyll-theme
+github_username: 5iddy
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jekyll-paginate
+  - jekyll-titles-from-headings
+
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false 
+  
+paginate: 5
+paginate_path: "/blog/page:num/"
+markdown: kramdown
+
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+  parse_block_html: true
+  syntax_highlighter: rouge
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - package.json
+  - webpack.config.js
+  - package-lock.json
+  - .babelrc
+
+compress_html:
+  clippings: all
+  ignore:
+    envs: development
+
+encoding: "utf-8"
+
+defaults:
+  - scope:
+      path: "blog/"
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
