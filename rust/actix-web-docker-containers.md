@@ -1,8 +1,7 @@
 ---
 layout: post
 title: How to Create Actix Web Docker Containers
-author: Siddhu
-subtitle: Hello world
+subtitle: Easy guide to building and deploying actix web docker containers.
 description: >-
   How to build, create and run actix web application in Docker Containers? How to create lightweight, secure and minimal docker containers?
 ---
