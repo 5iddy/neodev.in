@@ -18,6 +18,7 @@ plugins:
   - jekyll-gist
   - jekyll-paginate
   - jekyll-titles-from-headings
+  - jekyll-readme-index
 
 markdown: kramdown
 highlighter: rouge
