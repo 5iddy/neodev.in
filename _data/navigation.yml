@@ -1,0 +1,8 @@
+- name: C  
+  link: /c-tutorials
+- name: Rust
+  link: /rust
+- name: python
+  link: /python
+- name: linux
+  link: /linux
