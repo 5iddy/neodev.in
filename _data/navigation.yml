@@ -2,7 +2,9 @@
   link: /c-tutorials
 - name: Rust
   link: /rust
-- name: python
+- name: Python
   link: /python
-- name: linux
+- name: Linux
   link: /linux
+- name: About
+  link: /about
