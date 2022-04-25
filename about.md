@@ -1,5 +1,6 @@
 ---
 title: Free And Open Source Tutorials with No ADs.
+permalink: /about/
 layout: page
 ---
 
