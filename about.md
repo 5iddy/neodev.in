@@ -6,19 +6,19 @@ layout: page
 
 # Neodev.in is an open source tutorial website mainly focussed on Rust, C, Python and Linux.
 
-Source Code is hosted on [neodev.in github repo](https://github.com/5iddy/neodev.in). Anyone can make pull requests and update the tutorials when needed. This website will be Free, Open Source and AD free. There are is no cookie policy because this is a static website hosted using Github Pages.
+Source Code is hosted on [neodev.in github repo](https://github.com/5iddy/neodev.in). Anyone can make pull requests and update the tutorials when needed. This website will be Free, Open Source and AD free. There is no cookie policy because this is a static website hosted using Github Pages.
 
-And the theme, [Neonnights Theme for Jekyll](https://github.com/5iddy/neonnights-jekyll-theme), is also hosted on github and can be used by anyone for they github blog or website.
+And the theme, [Neonnights Theme for Jekyll](https://github.com/5iddy/neonnights-jekyll-theme), is also hosted on github and can be used by anyone for their github blog or website.
 
 ## The Rationale
 
-When I look for tutorials, I often find websites that ask too many things like registering, accepting cookie policies and even disabling my adblock. But what is more annonying is that the information they provide is often outdated, incomplete and insecure.
+When I look for tutorials, I often find websites that have certain expectations from me like registering, accepting cookie policies and even disabling my adblock. But what is more annonying is that the information they provide is often outdated, incomplete and insecure.
 
-A lot of these websites are maintained by people, IMO, aren't experts in these fields. They are mostly clones of each other with no new information but only what the other website seem to provide. It is quite common for blog website to analyze the top posts and copy all the information that they provide, a "technique" known in the business as SEO. 
+A lot of these websites are maintained by people, IMO, aren't experts in these fields. They are mostly clones of each other with no new information but only contain what the other websites seem to provide. It is quite common for blog-website to analyze the top results fro, Google and include all the information that they provide, a "technique" known in the business as SEO. 
 
-The problem with SEO is that it discourages websites to link sources that make users leave their websites to maintain the on-page time. Its a major problem for the devolopers because having relevant reference sections linked in the tutorial is quite helpful for the devs.
+The problem with SEO is that it discourages websites to link sources that make users leave their websites to keep the on-page time high. Its a major problem for the devolopers because having relevant reference sections or documentation linked in the tutorial is quite helpful for the devs, especially beginners.
 
-Since the website is run by a for profit organisation, its not easy to update tutorials when things are updated. Or making correctings. Or improving them. The best you can hope for is sending an email or filling a feedback form.
+Since the website is run by a for-profit organization, its not easy to update tutorials when things are updated. Or making correctings. Or improving them. The best you can hope for is sending an email or filling a feedback form.
 
 I could not find any good resources to share with my students. Most of the resources that I could had aforementioned problems or they are locked behind a paywall which made it harder for me know how good they are as it involved making bets and hoping for the best.
 
