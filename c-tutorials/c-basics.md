@@ -17,16 +17,19 @@ the variable with the equals `=` sign followed by the value. The variable can be
 can be assigned later. Variables can also be resigned when need.
 
 The following the general syntax of variable declaration and initialization:
+
 ```
 <type> <varible name> = <value>;
 ```
 
 The following is the general syntax of assigning value to a variable:
+
 ```
 <variable name> = <value>;
 ```
 
 Examples of variable usage:
+
 ```c
 int x=1, y=2;
 int h, j=1;
@@ -43,14 +46,14 @@ Here is a runnable example:
 #include <stdio.h>
 
 int main(){
-  int a = 22;
-  int b;
-  printf("a is %d\n", a);
-  b = 4;
-  printf("b is %d\n", b);
-  a = 6;
-  printf("a is %d\n", a);
-  return 0;
+    int a = 22;
+    int b;
+    printf("a is %d\n", a);
+    b = 4;
+    printf("b is %d\n", b);
+    a = 6;
+    printf("a is %d\n", a);
+    return 0;
 }
 ```
 
@@ -72,7 +75,6 @@ If you try to access a variable before initialization or value assignment,
 the default values of the variable type will be found. However, there is no
 reason to such a thing.
 
-
 ```c
 #include <stdio.h>
 
@@ -85,9 +87,10 @@ void main(){
 ```
 
 Compiling and running the above code produces the following output:
-```
+
+```shell
 a is 0, 0.000000, 
 ```
 
-For an integer, the default value is `0`. For a float, it is `0.0`. 
+For an integer, the default value is `0`. For a float, it is `0.0`.
 For a char, it is `\0` or `0`.
