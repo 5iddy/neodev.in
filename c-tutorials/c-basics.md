@@ -151,16 +151,18 @@ int main(){
 
 ### For Loop
 
+#### Sum of Number from 0 to n Using a For Loop
+
 ```c
 #include <stdio.h>
 
 int main(){
-    int a = 100;
+    int n = 100;
     int total = 0;
-    for(int i=0; i<a; i++){
+    for(int i=0; i<n; i++){
         total = total + i;
     }
-    printf("sum of numbers upto %d but not including %d is %d\n", a, a, total);
+    printf("sum of numbers upto %d but not including %d is %d\n", n, n, total);
     return 0;
 }
 ```
@@ -169,16 +171,16 @@ int main(){
 sum of numbers upto 100 but not including 100 is 4950
 ```
 
-Sum of numbers from 100 to 0:
+#### Sum of numbers from n to 0 using a For Loop
 
 ```c
 #include <stdio.h>
 
 int main(){
-    int a = 100, total = 0;
-    for(;a>=0;a--)
-        total = total + a;
-    printf("a = %d, total=%d\n", a, total);
+    int n = 100, total = 0;
+    for(;n>=0;n--)
+        total = total + n;
+    printf("n = %d, total=%d\n", n, total);
     return 0;
 }
 ```
@@ -187,17 +189,19 @@ int main(){
 a = -1, total=5050
 ```
 
+#### Factorial of n using a For Loop
+
 ```c
 #include <stdio.h>
 
 int main(){
-    int a = 10, product=1;
-    for(int i = 1; i <= a; i++){
+    int n = 10, product=1;
+    for(int i = 1; i <= n; i++){
         printf("%d * %d = ", product, i);
         product = product * i;
         printf("%d\n", product);
     }
-    printf("%d! = %d\n", a, product);
+    printf("%d! = %d\n", n, product);
     return 0;
 }
 ```
@@ -215,6 +219,8 @@ int main(){
 362880 * 10 = 3628800
 10! = 3628800
 ```
+
+#### Find the Factors of a Number Using a For Loop
 
 ```c
 #include <stdio.h>
@@ -242,19 +248,159 @@ int main(){
 
 ### While Loop
 
+
+
+#### Sum of Number from 0 to n Using a While Loop
+
+
 ```c
 #include <stdio.h>
 
 int main(){
-    int a = 100, total = 0, i = 0;
-    while (i<a){
+    int n = 100, total = 0, i = 0;
+    while (i<n){
         total = total + i;
         i++;
     }
-    printf("sum of numbers upto %d but not including %d is %d\n", a, a, total);
+    printf("sum of numbers upto %d but not including %d is %d\n", n, n, total);
     return 0;
 }
 ```
 
+```
+sum of numbers upto 100 but not including 100 is 4950
+```
+
+#### Sum of numbers from n to 0 using a While Loop
+
+```c
+#include <stdio.h>
+
+int main(){
+    int n = 100, total = 0;
+    while (n){
+        total = total + n;
+        n--;
+    }
+    printf("sum of numbers upto %d but not including %d is %d\n", n, n, total);
+    return 0;
+}
+```
+
+```
+sum of numbers upto 0 but not including 0 is 5050
+```
+
+#### Factorial of n using a While Loop
+
+```c
+`#include <stdio.h>
+
+int main(){
+    int n = 10, total=1, i=n;
+    while(i>=1){
+        printf("%d * %d = ", total, i);
+        total = total * i;
+        i--;
+        printf("%d\n", total);
+    }
+    printf("%d! = %d\n", n, total);
+    return 0;
+}`
+```
+
+```
+1 * 10 = 10
+10 * 9 = 90
+90 * 8 = 720
+720 * 7 = 5040
+5040 * 6 = 30240
+30240 * 5 = 151200
+151200 * 4 = 604800
+604800 * 3 = 1814400
+1814400 * 2 = 3628800
+3628800 * 1 = 3628800
+10! = 3628800
+```
+
+#### Find the Factors of a Number Using a While Loop
+
+```c
+#include <stdio.h>
+
+int main(){
+    int number = 200, i=number;
+    while(i >= 1) {
+        if (number % i == 0)
+            printf("%d is a factor of %d\n", i, number);
+        i--;
+    }
+    return 0;
+}
+```
+
+```
+200 is a factor of 200
+100 is a factor of 200
+50 is a factor of 200
+40 is a factor of 200
+25 is a factor of 200
+20 is a factor of 200
+10 is a factor of 200
+8 is a factor of 200
+5 is a factor of 200
+4 is a factor of 200
+2 is a factor of 200
+1 is a factor of 200
+```
 
 ## Do While Loop
+
+```c
+#include <stdio.h>
+
+int main(){
+    int number = 89, i = 2;
+    do {
+        if(number % i == 0) {
+            printf("%d is not a prime because it is divisible by %d\n", number, i);
+            prime_flag = 0;
+            break;
+        }
+        i++;
+    } while(i < number);
+
+    if (i == number) {
+        printf("%d is a prime number\n")
+    }
+
+    return 0;
+}
+```
+
+```
+checking if 2 can divide 13
+looks like it cannot.
+checking if 3 can divide 13
+looks like it cannot.
+checking if 4 can divide 13
+looks like it cannot.
+checking if 5 can divide 13
+looks like it cannot.
+checking if 6 can divide 13
+looks like it cannot.
+checking if 7 can divide 13
+looks like it cannot.
+checking if 8 can divide 13
+looks like it cannot.
+checking if 9 can divide 13
+looks like it cannot.
+checking if 10 can divide 13
+looks like it cannot.
+checking if 11 can divide 13
+looks like it cannot.
+checking if 12 can divide 13
+looks like it cannot.
+13 is a prime number
+```
+
