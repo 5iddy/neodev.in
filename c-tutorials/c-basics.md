@@ -5,7 +5,7 @@ subtitle: Basic Sytax, Control Flow Statemets, Loops and Functions
 description: >-
   Basics of C programming language, Vairiable Declarations, Control Flow Statements, Loops
   and Function Declarations & Definitions.
-permalink: absolute-c-basics-for-beginners
+slug: absolute-c-basics-for-beginners
 ---
 
 
