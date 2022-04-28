@@ -27,7 +27,6 @@ incremental: false
   
 paginate: 5
 paginate_path: "/blog/page:num/"
-markdown: kramdown
 
 permalink: pretty
 
@@ -39,7 +38,6 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
   parse_block_html: true
   syntax_highlighter: rouge
 
@@ -60,7 +58,7 @@ compress_html:
   ignore:
     envs: development
 
-encoding: "utf-8"
+encoding: "UTF-8"
 
 defaults:
   - scope:
