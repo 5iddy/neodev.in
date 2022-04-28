@@ -218,7 +218,6 @@ d 100 at 0x7ffd2fa979d6 / 140725403089366
  0 at 0x7ffd2fa979d7 / 140725403089367
 ```
 
-
 ```c
 #include <stdio.h>
 
@@ -246,4 +245,44 @@ l 108 at 0x7ffea6a65a5f / 140731694340703
 l 108 at 0x7ffea6a65a5e / 140731694340702
 e 101 at 0x7ffea6a65a5d / 140731694340701
 H 72 at 0x7ffea6a65a5c / 140731694340700
+```
+
+```c
+#include <stdio.h>
+
+void square_array(int array[], int len){
+    int i;
+    for(i=0; i<len; i++){
+        array[i] = array[i] * array[i];
+    }
+}
+
+int main(){
+    int numbers[] = { 1,2,3,4,5,6,7,8,9};
+    int number = 10;
+    printf("Array: ");
+    for(int i = 0; i<9; i++){
+        if(i < 8)
+            printf("%d, ", numbers[i]);
+        else
+            printf("%d\n", numbers[i]);
+    }
+
+    square_array(numbers, 9);
+
+    printf("Array after calling square_array: ");
+    for(int i = 0; i<9; i++){
+        if(i < 8)
+            printf("%d, ", numbers[i]);
+        else
+            printf("%d\n", numbers[i]);
+    }
+
+    return 0;    
+}
+```
+
+```shell
+Array: 1, 2, 3, 4, 5, 6, 7, 8, 9
+Array after calling square_array: 1, 4, 9, 16, 25, 36, 49, 64, 81
 ```
