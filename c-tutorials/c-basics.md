@@ -403,4 +403,3 @@ checking if 12 can divide 13
 looks like it cannot.
 13 is a prime number
 ```
-
