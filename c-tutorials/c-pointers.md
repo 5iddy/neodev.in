@@ -250,9 +250,8 @@ H 72 at 0x7ffea6a65a5c / 140731694340700
 ```c
 #include <stdio.h>
 
-void square_array(int array[], int len){
-    int i;
-    for(i=0; i<len; i++){
+void square_array(int *array, int len){
+    for(int i=0; i<len; i++){
         array[i] = array[i] * array[i];
     }
 }
