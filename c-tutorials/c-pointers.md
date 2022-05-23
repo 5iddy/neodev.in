@@ -7,14 +7,17 @@ description: >-
   What to do and What Not to do?
 ---
 
+
+### Basics of Pointer in the Simplest Way Possible
+
 ```c
 #include <stdio.h>
 
 int main(){
     int a = 10;
-    int *ptr = &a;
-    printf("*ptr = %d, a = %d\n", *ptr, a);
-    *ptr = 12;
+    int *ptr = &a; // Declaring and Assigning a Pointer
+    printf("*ptr = %d, a = %d\n", *ptr, a); // Dereferencing a Pointer
+    *ptr = 12;  // Mutating Data that a Pointer Points to
     printf("*ptr = %d, a = %d\n", *ptr, a);
     return 0;
 }
@@ -24,6 +27,8 @@ int main(){
 *ptr = 10, a = 10
 *ptr = 12, a = 12
 ```
+
+#### Looking at the 
 
 Contents of `simple.c`:
 

@@ -7,3 +7,5 @@ layout: page
 
 
 ### [C Pointers For Beginners]({{ "/c-tutorials/c-pointers" | absolute_url }})
+
+### [C Arrays For Beginners]({{ "/c-tutorials/c-arrays" | absolute_url }})
